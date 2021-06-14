@@ -3,6 +3,7 @@ package com.devsuperior.aulaconsultas.dto;
 import java.io.Serializable;
 
 import com.devsuperior.aulaconsultas.entities.Employee;
+import com.devsuperior.aulaconsultas.projections.EmployeeDeptProjection;
 
 public class EmployeeDeptDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -26,6 +27,12 @@ public class EmployeeDeptDTO implements Serializable {
 		departmentName = entity.getDepartment().getName();
 	}
 
+	public EmployeeDeptDTO(EmployeeDeptProjection projection) {
+		id = projection.getId();
+		name = projection.getName();
+		departmentName = projection.getDepartmentName();
+	}
+	
 	public Long getId() {
 		return id;
 	}

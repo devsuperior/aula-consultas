@@ -23,4 +23,22 @@ public class EmployeeController {
 		List<EmployeeDeptDTO> list = service.search1("M", "Sales");
 		return ResponseEntity.ok(list);
 	}
+
+	@GetMapping(value = "/search2")
+	public ResponseEntity<List<EmployeeDeptDTO>> search2() {
+		List<EmployeeDeptDTO> list = service.search2("M", "Sales");
+		return ResponseEntity.ok(list);
+	}
+
+	@GetMapping(value = "/search3")
+	public ResponseEntity<List<EmployeeDeptDTO>> search3() {
+		List<EmployeeDeptDTO> list = service.search3("M", "Sales");
+		return ResponseEntity.ok(list);
+	}
+
+	@GetMapping(value = "/search4")
+	public ResponseEntity<List<EmployeeDeptDTO>> search4() {
+		List<EmployeeDeptDTO> list = service.search4("M", "Sales");
+		return ResponseEntity.ok(list);
+	}
 }
